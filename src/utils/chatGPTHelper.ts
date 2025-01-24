@@ -1,4 +1,7 @@
-import { Configuration, OpenAIApi } from 'openai';
+import {
+    Configuration,
+    OpenAIApi
+} from 'openai';
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY, // Load your API key from environment variables
@@ -38,6 +41,7 @@ export const generateTestCasesFromPrompt = async (prompt: string): Promise<strin
         });
         return response.data.choices[0].text?.trim() || '';
     } catch (error) {
+        // @ts-ignore
         console.error('Error generating test cases from ChatGPT:', error.message);
         throw error;
     }
