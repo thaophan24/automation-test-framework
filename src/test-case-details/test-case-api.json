@@ -1,0 +1,23 @@
+[
+  {
+    "testCaseId": "API001",
+    "testCaseName": "Verify Login API",
+    "priority": "High",
+    "storyId": "US456",
+    "request": {
+      "endpoint": "/api/login",
+      "method": "POST",
+      "headers": { "Content-Type": "application/json" },
+      "body": { "username": "user1", "password": "password123" }
+    },
+    "expectedResponse": {
+      "statusCode": 200,
+      "responseBody": { "message": "Login successful", "userId": 1 }
+    },
+    "isRegression": true,
+    "isActive": true,
+    "createdDate": "2025-01-01T12:00:00Z",
+    "updatedDate": "2025-01-15T12:00:00Z",
+    "updatedVersion": "v1.0"
+  }
+]

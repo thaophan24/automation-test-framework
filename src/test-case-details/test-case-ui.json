@@ -1,0 +1,21 @@
+[
+  {
+    "testCaseId": "UI001",
+    "testCaseName": "Verify Login Functionality",
+    "priority": "High",
+    "storyId": "US123",
+    "preconditions": "User must be logged out.",
+    "testSteps": [
+      { "stepNumber": 1, "action": "click", "selectorType": "id", "selectorValue": "login-button" },
+      { "stepNumber": 2, "action": "fill", "selectorType": "name", "selectorValue": "username", "data": "user1" },
+      { "stepNumber": 3, "action": "fill", "selectorType": "name", "selectorValue": "password", "data": "password123" },
+      { "stepNumber": 4, "action": "click", "selectorType": "aria-label", "selectorValue": "Submit" }
+    ],
+    "expectedUIState": "User is redirected to the dashboard.",
+    "isRegression": true,
+    "isActive": true,
+    "createdDate": "2025-01-01T12:00:00Z",
+    "updatedDate": "2025-01-15T12:00:00Z",
+    "updatedVersion": "v1.2"
+  }
+]
