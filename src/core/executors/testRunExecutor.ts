@@ -2,9 +2,9 @@ import { UITestCase } from '../generators/uiTestCaseGenerator';
 import { APITestCase } from '../generators/apiTestCaseGenerator';
 import { generateUITestScript } from '../generators/uiTestScriptGenerator';
 import { generateAPITestScript } from '../generators/apiTestScriptGenerator';
-import { readJSONFile } from '../../utils/fileHandler';
-import { logInfo, logError } from '../utils/logger';
+import {logError, readJSONFile} from '../../utils/fileHandler';
 import { exec } from 'child_process';
+import {logInfo} from "../../utils/logger";
 
 interface TestRunResult {
     testCaseId: string;
@@ -14,7 +14,7 @@ interface TestRunResult {
     error?: string;
 }
 
-interface StoryTestRunResult {
+export interface StoryTestRunResult {
     storyId: string;
     totalTestCases: number;
     passed: number;
@@ -47,7 +47,7 @@ export const executeTestRun = async (storyId: string): Promise<StoryTestRunResul
                 testCaseName: testCase.testCaseName,
                 storyId,
                 status: 'Failed',
-                error: error.message,
+                error: error instanceof Error ? error.message : String(error),
             });
         }
     }
@@ -66,7 +66,7 @@ export const executeTestRun = async (storyId: string): Promise<StoryTestRunResul
                 testCaseName: testCase.testCaseName,
                 storyId,
                 status: 'Failed',
-                error: error.message,
+                error: error instanceof Error ? error.message : String(error),
             });
         }
     }
