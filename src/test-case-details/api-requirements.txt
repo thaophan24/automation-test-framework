@@ -1,0 +1,5 @@
+Feature: Login API
+- POST /api/login
+- Request: { "username": "user1", "password": "password123" }
+- Response: { "statusCode": 200, "message": "Login successful", "userId": 1 }
+- Error: { "statusCode": 401, "message": "Invalid credentials" }

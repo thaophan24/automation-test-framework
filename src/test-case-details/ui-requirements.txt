@@ -1,0 +1,4 @@
+Feature: Login Page
+- The user should be able to log in using a valid username and password.
+- If login fails, an error message should be displayed.
+- The "Forgot Password" link should redirect to the password recovery page.
