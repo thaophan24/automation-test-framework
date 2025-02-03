@@ -1,0 +1,56 @@
+### Automated Testing Framework Implementation Plan
+
+We are developing a new automated testing framework using **TypeScript** and the **Page Object Model (POM)** design pattern. This framework will integrate multiple tools to support robust, scalable, and maintainable test automation.
+
+#### Tools and Technologies
+
+- **Jest** for unit testing.
+- **Playwright** for user interface (UI) and end-to-end (E2E) testing.
+- **ChatGPT API** for generating test case details.
+
+#### Test Case Generation and Management
+
+We will use the ChatGPT API to automate the generation of test case details. Key aspects include:
+
+- **Output Format:** JSON structure.
+- **Input Sources:** Prompts, design images, HTML DOM, and request data formats (e.g., JSON, CSV, text).
+- **Test Case Types:** API, E2E, and UI testing.
+
+The framework will store test case information in JSON files, which will be used to generate Playwright test scripts. After execution, the test case status will be updated in these JSON files to reflect test outcomes.
+
+#### DOM Element Details Storage
+
+To improve maintainability, DOM elements for each screen will be stored in **YAML** files. Each element will be identified by attributes such as:
+
+- **id**
+- **class**
+- **name**
+- **aria-label**
+- **XPath**
+- **CSS selector**
+- **default value**
+
+This approach will help ensure consistency across test cases and make updates easier when the UI changes.
+
+#### Automated Test Script Execution
+
+- Test cases in JSON format will serve as the source for generating automated Playwright test scripts.
+- Once tests are executed, test statuses will be modified to indicate success or failure.
+- Test cases will be version-controlled to handle updates and changes in future functionality.
+
+#### Data Simulation for Testing
+
+In certain scenarios, we may need to simulate data to complete testing. For example, if a feature requires an **OTP (One-Time Password)** input, the framework will generate simulated test data dynamically based on the user's actions. Properties such as **id**, **class**, **name**, **aria-label**, and **default value** will be included in these simulations.
+
+#### Summary of Key Steps
+
+1. Define test cases using inputs such as design files and prompts.
+2. Store DOM element details in YAML files.
+3. Use JSON files to generate automated test scripts with Playwright.
+4. Execute tests and update test statuses.
+5. Manage test cases through version control to adapt to evolving requirements.
+
+This framework aims to streamline test automation processes, reduce manual effort, and enhance test coverage by utilizing modern tools and AI-driven case generation.
+
+There should be a defined prompt template, a DOM YAML template, and a test cases template for this framework. The prompt template should include fields such as prompt description, expected behavior, and key test parameters. The DOM YAML template should define element properties like identifiers (id, class, name), selectors, and attributes (e.g., aria-label). The test cases template should outline test steps, preconditions, expected results, and status fields for tracking test execution outcomes.
+
