@@ -1,0 +1,8 @@
+screen_name: "First Screen"
+elements:
+  - name: "Mobile Phone field"
+    id: "mobile-phone-input"
+    class: "input-text"
+    aria_label: ""
+    css_selector: ""
+    placeholder: ""

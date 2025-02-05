@@ -1,0 +1,27 @@
+screenId: ""
+elements:
+    id: "element-id"                # ID của phần tử (nếu có)
+    class: "element-class"          # Lớp CSS của phần tử
+    type: "element-type"            # Loại phần tử (text, email, password, radio, checkbox, file, button, submit, v.v.)
+    aria_label: "Accessible label"  # Nhãn hỗ trợ trợ năng (ARIA)
+    css_selector: ".custom-selector" # Bộ chọn CSS đầy đủ
+    placeholder: "Enter your value" # Văn bản gợi ý cho trường nhập liệu
+    value: "default-value"          # Giá trị mặc định của phần tử
+    name: "element-name"            # Tên nhóm cho phần tử (radio button, checkbox...)
+    maxlength: 255                  # Số ký tự tối đa cho trường nhập liệu
+    minlength: 5                    # Số ký tự tối thiểu cho trường nhập liệu
+    required: true                  # Phần tử có bắt buộc hay không
+    readonly: false                 # Trường chỉ đọc (người dùng không thể chỉnh sửa)
+    disabled: false                 # Vô hiệu hóa phần tử (người dùng không thể tương tác)
+    pattern: "[a-z0-9]+"            # Biểu thức chính quy để kiểm tra giá trị đầu vào
+    autocomplete: "on"              # Cho phép tự động điền giá trị (on/off hoặc thuộc tính cụ thể như email, name...)
+    autofocus: false                # Tự động focus khi trang được tải
+    tabindex: 0                     # Thứ tự điều hướng bằng phím tab
+    title: "Tooltip text"           # Văn bản gợi ý khi di chuột qua phần tử
+    alt: "Alternative text"         # Văn bản thay thế cho hình ảnh (sử dụng với <img>)
+    src: "path/to/resource"         # Đường dẫn tài nguyên (hình ảnh, iframe...)
+    accept: "image/png, image/jpeg" # Định dạng file được chấp nhận (cho <input type='file'>)
+    role: "button"                  # Vai trò của phần tử trong trợ năng (accessibility)
+    data_attributes:                # Thuộc tính tùy chỉnh dạng data-*
+      data-test-id: "test-id"
+      data-custom: "custom-value"

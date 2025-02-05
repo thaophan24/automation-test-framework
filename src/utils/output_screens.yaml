@@ -1,0 +1,45 @@
+screens:
+  - screen_name: Login Screen
+    screen_id: login-screen
+    elements:
+      - name: Email field
+        id: email-input
+        class: input-text
+        type: email
+        aria_label: Email Address
+        css_selector: '#email'
+        placeholder: Enter your email address
+        required: true
+        maxlength: 255
+        autocomplete: email
+      - name: Password field
+        id: password-input
+        class: input-password
+        type: password
+        aria_label: Password
+        css_selector: '#password'
+        placeholder: Enter your password
+        required: true
+        maxlength: 128
+      - name: Login button
+        id: login-button
+        class: button-primary
+        type: submit
+        aria_label: Login
+        css_selector: '#login-button'
+  - screen_name: Registration Screen
+    screen_id: registration-screen
+    elements:
+      - name: First Name field
+        id: first-name-input
+        class: input-text
+        type: text
+        aria_label: First Name
+        css_selector: '#first-name'
+        placeholder: Enter your first name
+      - name: Register button
+        id: register-button
+        class: button-secondary
+        type: submit
+        aria_label: Register
+        css_selector: '#register-button'
